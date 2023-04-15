@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><form
+{% if request.args.get('next') %}
+action="{{ url_for('login', next=request.args.get('next')) }}"
+{% else %}
+action="{{ url_for('login') }}"
+{% endif %}
+method="post" class="form-contact">
+<p><label>Email: </label> <input type="text" name="email" value="" required />
+<p><label>Пароль: </label> <input type="password" name="psw" value="" required />
+<p><input type="checkbox" name="remainme" /> Запомнить меня
+<p><input type="submit" value="Войти" />
+<hr align=left width="300px">
+<p><a href="{{url_for('register')}}">Регистрация</a>
+    <li id="l_nwsf" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Главная</span>
+    <span class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></span>
+  </a>
+</li>
+</form>
+</head>
+<body>
+<link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+</body>
+</html>

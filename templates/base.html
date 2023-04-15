@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>e
+</head>
+<link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+<body>
+
+<link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+<div id="side_bar_inner" class="side_bar_inner">
+        <div class="side_bar_nav_wrap">
+  <nav class="side_bar_nav">
+    <ol class="side_bar_ol">
+      <li id="l_pr" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/profile" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Мой профиль</span>
+    <span class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></span>
+  </a>
+</li><li id="l_nwsf" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/feed" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Новости</span>
+    <span class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></span>
+  </a>
+</li><li id="l_msg" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/im" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Мессенджер</span>
+    <span class="left_count_wrap fl_r" style="display: block;"><span class="inl_bl left_count"></span></span>
+  </a>
+</li><li id="l_ca" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/calls" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Звонки</span>
+    <span class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></span>
+  </a>
+</li><li id="l_fr" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/friends" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Друзья</span>
+    <object type="internal/link"><a href="/friends?section=requests" onclick="nav.link &amp;&amp; nav.link('/friends?section=requests', event); cancelEvent(event);" class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></a></object>
+  </a>
+</li><li id="l_gr" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/groups" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Что-то</span>
+    <span class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></span>
+  </a>
+</li>
+</div>
+</body>
+</html>

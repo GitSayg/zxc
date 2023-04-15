@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+<form action="/register" method="post" class="form-contact">
+<p><label>Имя: </label> <input type="text" name="name" value="" required />
+<p><label>Email: </label> <input type="text" name="email" value="" required />
+  <p><label>password: </label> <input type="password" name="psw" value="" required />
+  <p><label>password2: </label> <input type="password" name="psw2" value="" required />
+    <p><label>Номер: </label> <input type="text" name="number" value="" required />
+<p><input type="submit" value="Создагние" />
+<p><a href="{{url_for('login')}}">Вход</a>
+  <li id="l_nwsf" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Главная</span>
+    <span class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></span>
+  </a>
+</li>
+</form>
+</head>
+<link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+<body>
+</body>
+</html>

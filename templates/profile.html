@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<table border="0" class="profile-table">
+	<tr><td valign="top">
+		<div class="profile-ava"><img src="{{ url_for('userava') }}"></div>
+		<div class="profile-load">
+		<form action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+			<p><input type="file" name="file">
+			<p><input type="submit" value="Загрузить">
+		</form>
+		</div>
+	</td>
+	<td valign="top" class="profile-panel">
+		<p><a href="{{url_for('logout')}}">Выйти из профиля</a>
+		<ul class="profile-info">
+		<li>Имя: {{ current_user.getName() }}</li>
+		<li>Email: {{ current_user.getEmail() }}</li>
+		</ul>
+	</td></tr>
+</table>
+<link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+</head>
+<body>
+<div id="side_bar_inner" class="side_bar_inner">
+        <div class="side_bar_nav_wrap">
+  <nav class="side_bar_nav">
+    <ol class="side_bar_ol">
+      <li id="l_pr" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Главная</span>
+    <span class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></span>
+  </a>
+</li><li id="l_msg" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/createCard" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Создать визитку</span>
+    <span class="left_count_wrap fl_r" style="display: block;"><span class="inl_bl left_count"></span></span>
+  </a>
+</li><li id="l_fr" class="LeftMenu__item">
+  <a class="LeftMenu__itemLink" href="/mycards" onclick="return window.nav.go(this, event, {&quot;noback&quot;:true,&quot;params&quot;:{&quot;_ref&quot;:&quot;left_nav&quot;}})">
+    <span class="LeftMenu__itemLabel">Мои визитки</span>
+    <object type="internal/link"><a href="/friends?section=requests" onclick="nav.link &amp;&amp; nav.link('/friends?section=requests', event); cancelEvent(event);" class="left_count_wrap fl_r left_void"><span class="inl_bl"></span></a></object>
+  </a>
+</li>
+</div>
+</body>
+</html>
+
